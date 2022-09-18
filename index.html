@@ -116,21 +116,48 @@
                 <h4 class="text-white">Programming Languages</h4>
                 <div class="lang-container">
                   <img
+                    id="js-img"
                     src="assets/img/js_logo.png"
                     title="javascript"
                     class="lang-logo"
                   />
                   <img
+                    id="py-img"
                     src="assets/img/python_logo.png"
                     title="python"
                     class="lang-logo"
                   />
                   <img
+                    id="php-img"
                     src="assets/img/php_logo.png"
                     title="PHP"
                     class="lang-logo"
                   />
                 </div>
+              </div>
+              <div id="js-info" class="col-xs-12 lang-info-box hidden">
+                <h1 class="lang-title">JAVASCRIPT</h1>
+                <p class="lang-description">
+                  I already developed multiple projects using Javascript mainly
+                  using Frontend Frameworks like
+                  <strong>Vue, Angular, React and Svelte (VARS).</strong> I also
+                  used NodeJS as a backend alongside with express for HTTP
+                  requests.
+                </p>
+              </div>
+              <div id="py-info" class="col-xs-12 lang-info-box hidden">
+                <h1 class="lang-title">PYTHON</h1>
+                <p class="lang-description">
+                  I used Python mainly for automating tasks and other things
+                  related to spreadsheets, databases, text-manipulations etc...
+                </p>
+              </div>
+              <div id="php-info" class="col-xs-12 lang-info-box hidden">
+                <h1 class="lang-title">PHP</h1>
+                <p class="lang-description">
+                  I'm currently using PHP as fullstack - backend for my current
+                  projects that requires <strong>SQL</strong> databases.
+                </p>
               </div>
             </div>
           </div>
@@ -172,4 +199,34 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
+  <script>
+    const hideAndShow = (container, target) => {
+      if (container.classList.toString().includes("hidden")) {
+        container.classList.remove("hidden");
+        target.style = "max-width: 300px";
+      } else {
+        container.classList.add("hidden");
+        target.style = "max-width: 200px";
+      }
+    };
+
+    const showInfo = ({ target }) => {
+      const [placeholder_id] = target.id.split("-");
+      const lang_info = document.getElementById(placeholder_id + "-info");
+      ["js", "py", "php"]
+        .filter((item) => item !== placeholder_id)
+        .forEach((item) => {
+          document.getElementById(item + "-img").style = "max-width: 200px";
+          document.getElementById(item + "-info").classList.add("hidden");
+        });
+      hideAndShow(lang_info, target);
+    };
+
+    document.getElementById("js-img").addEventListener("click", showInfo);
+
+    document.getElementById("php-img").addEventListener("click", showInfo);
+
+    document.getElementById("py-img").addEventListener("click", showInfo);
+    document.getElementById("js-img").click();
+  </script>
 </html>
