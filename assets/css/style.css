@@ -901,7 +901,7 @@ footer .credits a {
 }
 
 .page-section {
-  margin: 10em 3em 10em 3em;
+  margin: 5em 3em 5em 3em;
 }
 
 .lang-container {
@@ -943,17 +943,30 @@ footer .credits a {
   color: white;
 }
 
+ul {
+  margin: 3em 0 1em 0;
+  color: white;
+}
+
+li {
+  font-size: 2em;
+  margin: 0.5em;
+}
+
 @media (max-width: 580px) {
   .page-section {
     margin: 5em 1em 5em 1em;
   }
-  .lang-logo {
-    max-width: 100px;
+  .lang-title {
+    font-size: 1.8em;
   }
-  .lang-logo:hover {
-    max-width: 150px;
+  .lang-description {
+    font-size: 1em;
   }
   .page-section h2 {
     font-size: 2em;
+  }
+  li {
+    font-size: 1.5em;
   }
 }
