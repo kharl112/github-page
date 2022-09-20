@@ -1,9 +1,12 @@
+const device_width = window.innerWidth > 0 ? window.innerWidth : screen.width;
 const hideAndShow = (container, target) => {
   if (container.classList.toString().includes("hidden")) {
     container.classList.remove("hidden");
-    target.style = "max-width: 300px";
+    if (device_width < 580) target.style = "max-width: 200px";
+    else target.style = "max-width: 300px";
   } else {
     container.classList.add("hidden");
+    if (device_width < 580) target.style = "max-width: 100px";
     target.style = "max-width: 200px";
   }
 };
@@ -14,7 +17,8 @@ const showInfo = ({ target }) => {
   ["js", "py", "php"]
     .filter((item) => item !== placeholder_id)
     .forEach((item) => {
-      document.getElementById(item + "-img").style = "max-width: 200px";
+      document.getElementById(item + "-img").style =
+        device_width > 580 ? "max-width: 200px" : "max-width: 100px";
       document.getElementById(item + "-info").classList.add("hidden");
     });
   hideAndShow(lang_info, target);
