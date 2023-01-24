@@ -4,6 +4,8 @@ function allowDrop(ev) {
 
 function drag(ev) {
     ev.dataTransfer.setData("id", ev.target.id);
+    changeBG();
+    ev.target.style.backgroundColor = "#316ccaaf";
 }
 
 function drop(ev) {
@@ -12,5 +14,5 @@ function drop(ev) {
     const dm = document.getElementById(data);
 
     dm.style.left = ev.clientX - 100 + "px";
-    dm.style.top = ev.clientY   + "px";
+    dm.style.top = ev.clientY + "px";
 }
