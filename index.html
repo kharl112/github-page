@@ -7,6 +7,7 @@
     <script src="assets/js/dragDrop.js" defer></script>
     <script src="assets/js/taskbar.js" defer></script>
     <script src="assets/js/clock.js" defer></script>
+    <script src="assets/js/iconEvents.js" defer></script>
   </head>
   <body>
     <main
@@ -20,6 +21,7 @@
         src="assets/images/my_computer.png"
         draggable="true"
         ondragstart="drag(event)"
+        onclick="iconClick(event)"
       />
 
       <img
@@ -27,6 +29,7 @@
         src="assets/images/my_projects.png"
         draggable="true"
         ondragstart="drag(event)"
+        onclick="iconClick(event)"
       />
     </main>
     <div id="taskbar" title="">
