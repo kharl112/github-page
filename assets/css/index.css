@@ -1,0 +1,88 @@
+body {
+  background-image: url("/assets/images/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  overflow-y: hidden;
+}
+
+main {
+  height: 90%;
+  padding: 10px;
+  display: block;
+}
+
+main img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+  position: absolute;
+}
+
+#image2 {
+  margin-left: 100px;
+}
+
+#taskbar {
+  height: 34px;
+  background: #2257d6 url("/assets/images/taskbar.png") repeat-x 0 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2222;
+}
+
+#start {
+  width: 100px;
+  height: 34px;
+  cursor: pointer;
+}
+
+#startbutton span {
+  width: 102px;
+  height: 34px;
+  background: transparent url("/assets/images/start_button.png") no-repeat 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#startbutton span:visited {
+  background-position: 0 -69px;
+}
+I#startbutton span.clicked {
+  background-position: 0 -69px;
+}
+
+#startbutton span:hover {
+  background-position: 0 -34px;
+}
+
+#clock {
+  background: #0f8ae7 url("/assets/images/clock.png") repeat-x 0 0;
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  top: -12px;
+  right: 0;
+  padding: 14px 10px 7px 20px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.right-image {
+  z-index: 9999;
+  position: fixed;
+  right: 76px;
+  bottom: 0;
+}
+
+main img:hover {
+  background-color: #316ccaaf;
+}

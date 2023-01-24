@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>kharl112</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <script src="assets/js/dragDrop.js" defer></script>
+    <script src="assets/js/taskbar.js" defer></script>
+    <script src="assets/js/clock.js" defer></script>
+  </head>
+  <body>
+    <main
+      id="main"
+      class="main"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+    >
+      <img
+        id="image1"
+        src="assets/images/my_computer.png"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+
+      <img
+        id="image2"
+        src="assets/images/my_projects.png"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+    </main>
+    <div id="taskbar" title="">
+      <div id="start">
+        <h2 id="startbutton">
+          <a><span id="startbuttongraphic" class="startnormal"></span>Start</a>
+        </h2>
+        <img src="assets/images/system_tray_arrow.png" class="right-image" />
+        <p id="clock">08:23 AM</p>
+      </div>
+    </div>
+  </body>
+</html>
