@@ -22,26 +22,39 @@ function drop(ev) {
 
 // for alert 
 var offset = [0, 0];
-var divOverlay = alert_error.firstChild.nextSibling;
 var isDown = false;
 
-divOverlay.addEventListener('mousedown', function (e) {
+//vars for events
+var divOverlay = alert_error.firstChild.nextSibling;
+var paint = paint_container.firstChild.nextSibling;
+
+var onMouseDown = (e, _var = divOverlay) => {
     isDown = true;
     offset = [
-        divOverlay.offsetLeft - e.clientX,
-        divOverlay.offsetTop - e.clientY
+        _var.offsetLeft - e.clientX,
+        _var.offsetTop - e.clientY
     ];
-}, true);
+}
 
-document.addEventListener('mouseup', function () {
+var onMouseUp = () => {
     isDown = false;
-    console.log("up")
-}, true);
+}
 
-divOverlay.addEventListener('mousemove', function (e) {
-    event.preventDefault();
+var onMouseMove = (e, _var = divOverlay) => {
+    e.preventDefault();
     if (isDown) {
-        divOverlay.style.left = (e.clientX + offset[0]) + 'px';
-        divOverlay.style.top = (e.clientY + offset[1]) + 'px';
+        _var.style.left = (e.clientX + offset[0]) + 'px';
+        _var.style.top = (e.clientY + offset[1]) + 'px';
     }
-}, true);
+}
+
+document.addEventListener('mouseup', onMouseUp, true);
+
+// alert
+divOverlay.addEventListener('mousedown', onMouseDown, true);
+divOverlay.addEventListener('mousemove', onMouseMove, true);
+
+
+// paint
+paint.addEventListener('mousedown', (event) => onMouseDown(event, paint), true);
+paint.addEventListener('mousemove', () => onMouseMove(event, paint), true);

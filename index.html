@@ -37,7 +37,7 @@
     </main>
 
     <!-- windows start -->
-    <div class="windows-start hidden" id="windows-start">
+    <div class="windows-start hidden" id="windows-start" style="z-index: 9999">
       <div class="header">
         <img src="assets/images/kharl112.jpeg" />
         <span class="text">kharl112</span>
@@ -99,7 +99,7 @@
               <div class="menu__item__text">Winamp</div>
             </div>
           </div>
-          <div class="menu__item">
+          <div class="menu__item" onclick="hidePaint(false);">
             <img
               class="menu__item__img"
               src="data:image/png;base64,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"
@@ -357,6 +357,62 @@
                 <span class="error__confirm">OK</span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- paint -->
+    <div
+      style="position: relative; z-index: 0"
+      id="paint-container"
+      class="hidden"
+    >
+      <div
+        class="sc-kAzzGY etljSV"
+        style="
+          transform: translate(81px, 26px);
+          width: 660px;
+          height: 500px;
+          z-index: 51;
+          cursor: auto;
+          position: fixed;
+          top: 0;
+          right: calc(50vw - 200px);
+          resize: both;
+          overflow: auto;
+        "
+        draggable="false"
+        id="paint"
+      >
+        <div class="header__bg"></div>
+        <header class="app__header">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANiSURBVDhPY4CBP1vTu64W6/79t680DipEGjieJP1wo6fo/ysl2r+MjKwmWJvbO7pZuYkZGxtzOTg4cKzesN+yecLeL3JajtrSKg4yUkBxoDYmiG4gaLOWXD9ZV+D/VFvFf4pqZgtyY3yyfh/2eqVvZqOmY+ome/HigwMz5pz47xU98ZG0qoOPlLaNnIqKJztUOwT0lvb8SY2t+yulaLZyamPBjK/nlv3TMrAJ1TZ2sNl14MLSWQuv/XeNm/ZaUtWhWkLN3lRU24EHqhUCJu999il40r0/EkoWa2f3Ba+/uSrgv6a+TY2uiUvknb2brx+au+qvup7bdqALWmRUHc3V1a15oVohoGPB0RvR0+79C08suHJqk9zdPX28/5OK6/c0Z8TN/RMj9X+7nc5TXU2bdUoqNlmK6tbqCgoOHFCtDAzhyeVSk5aeeppUc/1/R9+yv9/PCfxZ1K72v3/3oz+vVtX+/mHG8L9VTuWhpor5Qm0V8xBjTVtJBwYHFqh2Bob9Jy8EtW3ec96zY9J/3/yo/x8Psv2f26L3v2DVk//Pavz/P9Hj/t+fkvNGW8Vijqm6pYeZhpkwA0MDIhY6piww2vXy0BvP3Zb/FdNY/99axvC/t9rqf1TXhf/3Yq3+PyuL/19U3flcW9t+qoWJi4OLSyg/igGRScVyB89d3DL7wtL/cYuz/5/c6/V/9drS/8v3n/7/vsbp/4f1M/7besZc1zJyb7WyDzJ1CA0FxsB/Rqh2CNh+4PjkBcdX/PebEvJ/8xyJ/xs2Zfy/tb39/998xf83z576J6lmd1DV2DPXzDlczSEhARSAqAZ0zFwZO+nAkf/+04L+T2oT+z9rQcb/B33B/x/mu/6fsWrHDyl1+43Khh4RhtYRUg4ODYgAhIHooh6r2vX7PobNjv1f2aD8f+PskP8/yrT+r2ru+Z/XMv29ooHbAm1LPw9L92QhhgYk/8OAW0SRfPPCDfMi52f+T+q2+39gbtb/T5nq/+ct3f7X3C3qipa5X5uxY6y5tV8SL8N/NP/DQFpZe0DBrIZr1TtW/d937Pb/4/Pn/IvKbniioOu6Ut8mJNHKM03Z0zMXNQ8gAzO3WEUNa78gGW2HdmEliyWCchYrxVXtZqoae+UZO0aY23hnCoaGrmKGqGZgAAAFjGphxzjy1wAAAABJRU5ErkJggg=="
+            alt="Untitled - Paint"
+            class="app__header__icon"
+            draggable="false"
+          />
+          <div class="app__header__title">Untitled - Paint</div>
+          <div class="sc-cSHVUG fqmhFb">
+            <button
+              class="header__button header__button--close"
+              onclick="hidePaint(true)"
+            ></button>
+          </div>
+        </header>
+        <div class="app__content">
+          <div style="width: 100%; height: 100%; position: relative">
+            <iframe
+              src="https://jspaint.app"
+              title="paint"
+              style="
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(192, 192, 192);
+              "
+              frameborder="0"
+            ></iframe>
           </div>
         </div>
       </div>
