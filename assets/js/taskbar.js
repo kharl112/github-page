@@ -1,6 +1,4 @@
-// start button
-
-document.getElementById("startbutton").addEventListener("click", ({ target }) => {
-    // target.classList.add("clicked")
-    target.style.backgroundPosition = "background-position: 0 -69px;"
-})
+document.getElementById("startbutton").addEventListener("click", () => {
+    if (windows_start.classList.contains("hidden")) return hideWindows(false);
+    return hideWindows(true);
+});

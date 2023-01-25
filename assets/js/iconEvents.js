@@ -1,4 +1,5 @@
 const iconClick = ({ target }) => {
-    changeBG()
+    changeBG();
+    hideWindows(true);
     target.style.backgroundColor = "#316ccaaf";
 }

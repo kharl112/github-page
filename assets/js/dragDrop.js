@@ -5,6 +5,7 @@ function allowDrop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("id", ev.target.id);
     changeBG();
+    hideWindows(true);
     ev.target.style.backgroundColor = "#316ccaaf";
 }
 
