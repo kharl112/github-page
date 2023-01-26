@@ -22,9 +22,25 @@ var hideAlert = (hide) => {
 var hidePaint = (hide) => {
     paint_container.firstChild.nextSibling.style.top = 0;
     paint_container.firstChild.nextSibling.style.right = "calc(50vw - 50px)";
-    // if called on windows start
-    if(!hide) hideWindows(true);
+    const paint_item = document.getElementById("item-paint");
+
+    if (!hide) {
+
+        // if called on windows start
+        hideWindows(true)
+
+        paint_item.classList.remove("hidden")
+    }
+
+    if (hide) paint_item.classList.add("hidden")
     hide ? paint_container.classList.add("hidden") : paint_container.classList.remove("hidden");
+}
+
+
+var hidePaintTask = () => {
+
+    hideWindows(true)
+    !paint_container.classList.contains("hidden") ? paint_container.classList.add("hidden") : paint_container.classList.remove("hidden");
 }
 
 var reset = () => {

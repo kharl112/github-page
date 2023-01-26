@@ -13,7 +13,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 main {
@@ -41,7 +41,6 @@ main img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  z-index: 2222;
 }
 
 #start {
@@ -430,6 +429,26 @@ main img:hover {
   width: 2px;
   background-color: white;
 }
+.fqmhFb .header__button--minimize {
+  box-shadow: rgb(70, 70, 255) 0px -1px 2px 1px inset;
+  background-image: radial-gradient(
+    circle at 90% 90%,
+    rgb(0, 84, 233) 0%,
+    rgb(34, 99, 213) 55%,
+    rgb(68, 121, 228) 70%,
+    rgb(163, 187, 236) 90%,
+    white 100%
+  );
+}
+.fqmhFb .header__button--minimize::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 13px;
+  height: 3px;
+  width: 8px;
+  background-color: white;
+}
 
 .fqmhFb .header__button--close::before {
   content: "";
@@ -508,4 +527,53 @@ main img:hover {
 
 .gLUcEj .error__confirm {
   line-height: 11px;
+}
+
+.taskbar-items {
+  width: 100%;
+  padding: 5px;
+  padding-right: 5px;
+  padding-right: 200px;
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  right: -300px;
+}
+
+.footer__window {
+  flex: 1 1 0%;
+  max-width: 150px;
+  color: rgb(255, 255, 255);
+  border-radius: 2px;
+  margin-top: 2px;
+  padding: 0px 8px;
+  height: 22px;
+  font-size: 11px;
+  background-color: rgb(60, 129, 243);
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset,
+    rgba(255, 255, 255, 0.2) 1px 1px 1px inset;
+  position: relative;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+.footer__window.cover:hover {
+  background-color: rgb(83, 163, 255);
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 0px inset,
+    rgba(255, 255, 255, 0.2) 1px 1px 1px inset;
+}
+
+.footer__icon {
+  height: 15px;
+  width: 15px;
+}
+
+.footer__text {
+  position: absolute;
+  left: 27px;
+  right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
