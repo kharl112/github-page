@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap");
 body {
-  background-image: url("assets/images/background.png");
+  background-image: url("../images/background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@ main img {
 
 #taskbar {
   height: 34px;
-  background: #2257d6 url("assets/images/taskbar.png") repeat-x 0 0;
+  background: #2257d6 url("../images/taskbar.png") repeat-x 0 0;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -52,7 +52,7 @@ main img {
 #startbutton span {
   width: 102px;
   height: 34px;
-  background: transparent url("assets/images/start_button.png") no-repeat 0 0;
+  background: transparent url("../images/start_button.png") no-repeat 0 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,7 +70,7 @@ I#startbutton span.clicked {
 }
 
 #clock {
-  background: #0f8ae7 url("assets/images/clock.png") repeat-x 0 0;
+  background: #0f8ae7 url("../images/clock.png") repeat-x 0 0;
   font-weight: bold;
   display: block;
   position: absolute;
