@@ -28,6 +28,7 @@ var isDown = false;
 var divOverlay = alert_error.firstChild.nextSibling;
 var paint = paint_container.firstChild.nextSibling;
 var myCom = myCom_container.firstChild.nextSibling;
+var notepad = notepad_container.firstChild.nextSibling;
 
 var onMouseDown = (e, _var = divOverlay) => {
     isDown = true;
@@ -64,3 +65,8 @@ paint.addEventListener('mousemove', () => onMouseMove(event, paint), true);
 // paint
 myCom.addEventListener('mousedown', (event) => onMouseDown(event, myCom), true);
 myCom.addEventListener('mousemove', () => onMouseMove(event, myCom), true);
+
+
+// paint
+notepad.addEventListener('mousedown', (event) => onMouseDown(event, notepad), true);
+notepad.addEventListener('mousemove', () => onMouseMove(event, notepad), true);

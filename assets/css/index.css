@@ -16,6 +16,10 @@ body {
   display: none !important;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 main {
   height: 90%;
   padding: 10px;
@@ -943,4 +947,231 @@ main img:hover {
   width: 200px;
   margin-bottom: 15px;
   height: auto;
+}
+
+/* Notepad */
+.iuqgts {
+  display: flex;
+  position: absolute;
+  padding: 3px;
+  background-color: rgb(101, 130, 245);
+  flex-direction: column;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.iuqgts .header__bg {
+  background: linear-gradient(
+    rgb(118, 151, 231) 0%,
+    rgb(126, 158, 227) 3%,
+    rgb(148, 175, 232) 6%,
+    rgb(151, 180, 233) 8%,
+    rgb(130, 165, 228) 14%,
+    rgb(124, 159, 226) 17%,
+    rgb(121, 150, 222) 25%,
+    rgb(123, 153, 225) 56%,
+    rgb(130, 169, 233) 81%,
+    rgb(128, 165, 231) 89%,
+    rgb(123, 150, 225) 94%,
+    rgb(122, 147, 223) 97%,
+    rgb(171, 186, 227) 100%
+  );
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 28px;
+  pointer-events: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.iuqgts .header__bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  opacity: 0.3;
+  background: linear-gradient(to right, rgb(22, 56, 230) 0%, transparent 100%);
+  top: 0px;
+  bottom: 0px;
+  width: 15px;
+}
+
+.iuqgts .header__bg::after {
+  content: "";
+  opacity: 0.4;
+  display: block;
+  position: absolute;
+  right: 0px;
+  background: linear-gradient(to left, rgb(22, 56, 230) 0%, transparent 100%);
+  top: 0px;
+  bottom: 0px;
+  width: 15px;
+}
+
+.iuqgts .app__header {
+  display: flex;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: "Noto Sans";
+  text-shadow: rgb(0, 0, 0) 1px 1px;
+  color: white;
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+.iuqgts .app__header__icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 1px;
+  margin-right: 3px;
+}
+
+.iuqgts .app__header__title {
+  flex: 1 1 0%;
+  pointer-events: none;
+  padding-right: 5px;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dCJNFM {
+  opacity: 0.6;
+  height: 22px;
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  margin-top: -1px;
+  margin-right: 1px;
+}
+
+.dCJNFM .header__button--minimize {
+  box-shadow: rgb(70, 70, 255) 0px -1px 2px 1px inset;
+  background-image: radial-gradient(
+    circle at 90% 90%,
+    rgb(0, 84, 233) 0%,
+    rgb(34, 99, 213) 55%,
+    rgb(68, 121, 228) 70%,
+    rgb(163, 187, 236) 90%,
+    white 100%
+  );
+}
+
+.dCJNFM .header__button {
+  margin-right: 1px;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.dCJNFM .header__button--minimize::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 13px;
+  height: 3px;
+  width: 8px;
+  background-color: white;
+}
+
+.dCJNFM .header__button--close {
+  box-shadow: rgb(218, 70, 0) 0px -1px 2px 1px inset;
+  background-image: radial-gradient(
+    circle at 90% 90%,
+    rgb(204, 70, 0) 0%,
+    rgb(220, 101, 39) 55%,
+    rgb(205, 117, 70) 70%,
+    rgb(255, 204, 178) 90%,
+    white 100%
+  );
+}
+
+.dCJNFM .header__button--close::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 2px;
+  transform: rotate(45deg);
+  height: 16px;
+  width: 2px;
+  background-color: white;
+}
+
+.dCJNFM .header__button--close::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 2px;
+  transform: rotate(-45deg);
+  height: 16px;
+  width: 2px;
+  background-color: white;
+}
+
+.iuqgts .app__content {
+  flex: 1 1 0%;
+  position: relative;
+  margin-top: 25px;
+  height: calc(100% - 25px);
+}
+
+.dcPUSR {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(237, 237, 229) 0%,
+    rgb(237, 232, 205) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: stretch;
+  align-items: stretch;
+}
+
+.dcPUSR .np__toolbar {
+  position: relative;
+  height: 21px;
+  flex-shrink: 0;
+  border-bottom: 1px solid white;
+}
+
+.bvzUWv {
+  display: inline-flex;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+}
+
+.bvzUWv .drop-down {
+  font-size: 11px;
+  height: 100%;
+  position: relative;
+}
+
+.bvzUWv .drop-down__label {
+  padding: 0px 7px;
+}
+
+.hmQVQD {
+  flex: 1 1 auto;
+  outline: currentcolor none medium;
+  font-family: "Lucida Console", monospace;
+  font-size: 13px;
+  line-height: 14px;
+  resize: none;
+  padding: 2px;
+  white-space: nowrap;
+  overflow: scroll;
+  border: 1px solid rgb(150, 171, 255);
 }

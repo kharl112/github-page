@@ -3,6 +3,9 @@ var windows_start = document.getElementById("windows-start");
 var alert_error = document.getElementById("alert-error-container");
 var paint_container = document.getElementById("paint-container");
 var myCom_container = document.getElementById("my-com-container");
+var notepad_container = document.getElementById("notepad-container");
+var notepad_textarea = document.getElementById("notepad-textarea");
+var notepad_title = document.getElementById("notepad-title");
 
 // change bg from each main items
 var changeBG = () => {
@@ -73,7 +76,52 @@ var hideMyComTask = () => {
     !myCom_container.classList.contains("hidden") ? myCom_container.classList.add("hidden") : myCom_container.classList.remove("hidden");
 }
 
+
+// notepad 
+var notepad_item = document.getElementById("item-notepad");
+var taskbar_notepad_text = document.getElementById("taskbar-notepad-text");
+
+var resetNotepad = (text) => {
+    notepad_title.innerHTML = text;
+    notepad_textarea.value = ""
+    taskbar_notepad_text.innerText = text;
+}
+
+var hideNotepad = (hide) => {
+    // myCom_container.firstChild.nextSibling.style.top = 0;
+    // myCom_container.firstChild.nextSibling.style.right = "calc(50vw - 50px)";
+
+    if (!hide) {
+
+        // if called on windows start
+        hideWindows(true)
+        resetNotepad("Untitled - Notepad");
+        notepad_item.classList.remove("hidden")
+    }
+
+    if (hide) notepad_item.classList.add("hidden")
+    hide ? notepad_container.classList.add("hidden") : notepad_container.classList.remove("hidden");
+}
+
+
+var hideNotepadTask = () => {
+    resetNotepad(notepad_title.innerText);
+    hideWindows(true)
+    !notepad_container.classList.contains("hidden") ? notepad_container.classList.add("hidden") : notepad_container.classList.remove("hidden");
+}
+
+var codingExp = () => {
+    hideNotepad(false);
+    resetNotepad("Coding Experience - Notepad");
+    notepad_textarea.value =
+        `Coding Experience
+ - 2 years making personal projects 
+ - 2 years working on real jobs
+`
+}
+
 var reset = () => {
     changeBG();
     hideWindows(true);
 }
+
