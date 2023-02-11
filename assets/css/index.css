@@ -925,6 +925,13 @@ main img:hover {
   width: 200px;
   margin-bottom: 15px;
   height: auto;
+  padding: 5px;
+}
+
+.iPYpwe .com__content__right__card__item:hover {
+  background-color: rgba(0, 0, 255, 0.61);
+  cursor: pointer;
+  color: white;
 }
 
 .iPYpwe .com__content__right__card__img {
