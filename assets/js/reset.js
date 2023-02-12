@@ -115,8 +115,11 @@ var codingExp = () => {
     resetNotepad("Coding Experience - Notepad");
     notepad_textarea.value =
         `Coding Experience
- - 2 years making personal projects 
- - 2 years working on real jobs
+ - 5 years making personal projects 
+ - 3 years working on real jobs
+
+ In those years of making and working on projects, I learned how vast the tech industry
+ and how people working on tech valued by different employers.
 `
 }
 
