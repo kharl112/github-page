@@ -1,8 +1,10 @@
 var main = document.getElementById("main");
 var windows_start = document.getElementById("windows-start");
 var alert_error = document.getElementById("alert-error-container");
+var sww_error = document.getElementById("sww-alert-container");
 var paint_container = document.getElementById("paint-container");
 var myCom_container = document.getElementById("my-com-container");
+var logoff_container = document.getElementById("logoff-container");
 var notepad_container = document.getElementById("notepad-container");
 var notepad_textarea = document.getElementById("notepad-textarea");
 var notepad_title = document.getElementById("notepad-title");
@@ -127,4 +129,27 @@ var reset = () => {
     changeBG();
     hideWindows(true);
 }
+
+
+// Logoff
+var hideLogOff = (hide) => {
+    if (!hide) {
+        logoff_container.classList.remove("hidden");
+    }
+    else
+        logoff_container.classList.add("hidden");
+
+    reset();
+}
+
+var hideSww = (hide) => {
+    if (!hide) {
+        hideLogOff(true);
+        sww_error.classList.remove("hidden");
+    }
+    else
+        sww_error.classList.add("hidden");
+    reset();
+}
+
 

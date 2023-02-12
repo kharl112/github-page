@@ -1182,3 +1182,134 @@ main img:hover {
   overflow: scroll;
   border: 1px solid rgb(150, 171, 255);
 }
+
+/* Logoff */
+
+body .modal {
+  margin-top: 30vh;
+  width: 300px;
+  height: 190px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+body .header {
+  height: 42px;
+  display: flex;
+  padding-left: 10px;
+  -moz-box-align: center;
+  align-items: center;
+  background: rgb(9, 33, 120);
+}
+
+body .header__text {
+  font-size: 17px;
+  font-family: "Noto Sans";
+  color: rgb(255, 255, 255);
+  flex: 1 1 0%;
+}
+
+body .header__img {
+  width: auto;
+  height: 30px;
+  margin-right: 5px;
+}
+
+body .content {
+  flex: 1 1 0%;
+  background: linear-gradient(
+    to right,
+    rgb(51, 73, 224) 0%,
+    rgb(97, 126, 230) 47%,
+    rgb(97, 126, 230) 53%,
+    rgb(51, 73, 224) 100%
+  );
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 30px;
+  position: relative;
+}
+
+body .content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(
+    to right,
+    transparent 0px,
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255, 255, 255, 0.3) 60%,
+    transparent 100%
+  );
+}
+
+body .button-container.disable {
+  color: gray;
+}
+
+body .button-container {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+body .button-container.disable .button-img {
+  opacity: 0.3;
+}
+body .button-img {
+  height: 30px;
+  width: 30px;
+}
+body .button-text {
+  padding-top: 3px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+body .button-img {
+  height: 30px;
+  width: 30px;
+}
+
+body .button-img:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+body .footer {
+  height: 42px;
+  background: rgb(9, 33, 120);
+  display: flex;
+  -moz-box-pack: end;
+  justify-content: flex-end;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+body .footer__button {
+  font-size: 11px;
+  padding: 0px 8px;
+  line-height: 10px;
+  background: rgb(240, 240, 240);
+  margin-right: 10px;
+  height: 16px;
+  border-radius: 1px;
+  box-shadow: rgb(0, 5, 176) 2px 2px 4px 1px, white 2px 2px 2px 0px,
+    skyblue 0px 0px 0px 1px inset, skyblue 2px -2px inset;
+  border: medium none;
+  outline: none;
+  cursor: pointer;
+}
+
+body .footer__button:hover {
+  box-shadow: black 1px 1px, white 1px 1px 2px 0px, orange 0px 0px 0px 1px inset,
+    orange 2px -2px inset;
+}
