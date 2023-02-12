@@ -3,10 +3,11 @@ var menu_right_children = Array.from(menu_right.children).filter((item) => item.
 
 // throw error onclicking unused buttons 
 menu_right_children.forEach((node) => {
-    node.onclick = () => {
-        hideWindows(true);
-        hideAlert(false);
-    }
+    if (!node.hasAttribute("onclick"))
+        node.onclick = () => {
+            hideWindows(true);
+            hideAlert(false);
+        }
 })
 
 class Links {
