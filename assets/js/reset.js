@@ -5,6 +5,7 @@ var sww_error = document.getElementById("sww-alert-container");
 var paint_container = document.getElementById("paint-container");
 var myCom_container = document.getElementById("my-com-container");
 var logoff_container = document.getElementById("logoff-container");
+var switch_user_container = document.getElementById("switch-user-container");
 var notepad_container = document.getElementById("notepad-container");
 var notepad_textarea = document.getElementById("notepad-textarea");
 var notepad_title = document.getElementById("notepad-title");
@@ -142,6 +143,17 @@ var hideLogOff = (hide) => {
     reset();
 }
 
+var hideSwitchUser = (hide) => {
+    if (!hide) {
+        switch_user_container.classList.remove("hidden");
+    }
+    else
+        switch_user_container.classList.add("hidden");
+
+    hideSww(true)
+    reset();
+}
+
 var hideSww = (hide) => {
     if (!hide) {
         hideLogOff(true);
@@ -149,6 +161,8 @@ var hideSww = (hide) => {
     }
     else
         sww_error.classList.add("hidden");
+
+    hideLogOff(true)
     reset();
 }
 
