@@ -80,6 +80,12 @@ var hideMyComTask = () => {
 }
 
 
+//Projects
+var goToProjects = () => {
+    window.open("https://github.com/kharl112?tab=repositories", "__blank");
+}
+
+
 // notepad 
 var notepad_item = document.getElementById("item-notepad");
 var taskbar_notepad_text = document.getElementById("taskbar-notepad-text");

@@ -28,7 +28,7 @@
         src="assets/images/my_computer.png"
         draggable="true"
         ondragstart="drag(event)"
-        onclick="iconClick(event, hideMyCom)"
+        ondblclick="iconClick(event, hideMyCom)"
       />
 
       <img
@@ -36,7 +36,7 @@
         src="assets/images/my_projects.png"
         draggable="true"
         ondragstart="drag(event)"
-        onclick="iconClick(event)"
+        ondblclick="iconClick(event, goToProjects)"
       />
     </main>
 
@@ -562,7 +562,11 @@
                   <div class="com__content__right__card">
                     <div class="com__content__right__card__header">About</div>
                     <div class="com__content__right__card__content" id="about">
-                      <div class="com__content__right__card__item">
+                      <a
+                        class="com__content__right__card__item"
+                        href="https://github.com/kharl112?tab=repositories"
+                        target="__blank"
+                      >
                         <img
                           src="assets/images/my_documents.png"
                           alt="documents"
@@ -573,7 +577,8 @@
                             Projects
                           </div>
                         </div>
-                      </div>
+                      </a>
+
                       <div
                         class="com__content__right__card__item cursor-pointer"
                         onclick="codingExp()"
